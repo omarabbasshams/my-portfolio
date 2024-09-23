@@ -1,0 +1,9 @@
+vixzfp6tz6mxhlzsgwv3ooiheqmnaevpxnck4znrp3bsfyannsza
+
+
+
+db.createUser({
+    username: "admin",
+  password: "$2a$10$J8tT1X3EocAJJLAjePPXEOLNYSAvyunTfTVgC2cCnmHSvveOxLxTW", 
+ 
+})

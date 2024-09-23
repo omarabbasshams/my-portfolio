@@ -1,0 +1,55 @@
+#skills {
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: 30%;
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e55347;
+}
