@@ -1,0 +1,174 @@
+/* Basic container style */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Layer 1: Larger than the screen */
+  .layer1 {
+    position: absolute;
+    width: 150vw; /* 150% of the viewport width */
+    height: 150vh; /* 150% of the viewport height */
+    background-size: cover;
+    background-position: center;
+    /* z-index: 1; */
+    animation: diagonalMove 30s ease-in-out infinite;
+  }
+  
+  /* Layer 2: Standard layer covering the screen */
+  .layer2 {
+    position: absolute;
+    top: 30vh;
+    left: 60vw;
+    width: 20vw;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    /* z-index: 2; */
+    background-color: transparent;
+    animation: diagonalMoveEdge 50s ease-in-out infinite;
+  }
+  @keyframes diagonalMoveEdge {
+    0% {
+      background-position:  bottom; /* Start with right-bottom edge */
+    }
+    20% {
+      background-position:  top; /* Move to left-top edge */
+    }
+    40% {
+      background-position:  bottom; /* Move back to right-bottom edge */
+    }
+  }
+  /* Keyframe animation for diagonal movement */
+  @keyframes diagonalMove {
+    0% {
+      transform: translate(-50vw, -50vh); /* Start position */
+    }
+    50% {
+      transform: translate(0, 0); /* Move diagonally down */
+    }
+    100% {
+      transform: translate(-50vw, -50vh); /* Move back to the start position */
+    }
+  }
+  
+  /* General Styling */
+.header-section {
+  position: absolute;
+    text-align: left;
+    padding: 50px;
+   top: 35%;
+   left: 10%;
+    font-family: 'Arial', sans-serif;
+  
+  }
+  
+  .greeting {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-left: 14px;
+  }
+  
+  .hello {
+     /* yellow-orange background */
+    color: black;
+    padding: 5px 10px;
+    position: relative;
+  
+  }
+  .hello::after{
+    content: '';
+    background: #ffc94a;
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+    right: -60px;
+  }
+  
+  .stranger {
+    color: black;
+  }
+  
+  .name {
+    font-size: 92px;
+    color: #00bcd4; /* teal blue color */
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 30px;
+    border-left: #ffc94a 3px solid;
+    padding-left: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+  }
+  
+  .buttons a {
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .download-cv {
+    background-color: #ffc94a; /* yellow-orange button */
+    color: black;
+  }
+  .hire {
+    background-color: #ffc94a; /* yellow-orange button */
+    color: black;
+    position: absolute;
+    bottom: 15%;
+    right: 20%;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+  }
+  .send-message {
+    background-color: #ff5e77; /* pink button */
+  }
+  
+  .download-cv:hover, .send-message:hover {
+    opacity: 0.8; /* hover effect */
+  }
+  
+  .image1{
+    position: absolute;
+    top: 20vh;
+    right: 15vw;
+    height: 50vh;
+    width: 20vw;
+    animation: verticalMove 10s ease-in-out infinite;
+  }
+
+  @keyframes verticalMove {
+    0% {
+      transform: translateY(-3vh); /* Start position (move up) */
+    }
+    50% {
+      transform: translateY(3vh); /* Move down */
+    }
+    100% {
+      transform: translateY(-3vh); /* Move back to the start position */
+    }
+  }

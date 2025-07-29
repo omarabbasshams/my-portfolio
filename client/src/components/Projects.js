@@ -3,7 +3,23 @@ import React, { useState, useEffect } from 'react';
 import { getProjects, createProject, updateProject, deleteProject } from '../api/api';
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([
+    {
+      name: 'Project 1',
+      description: 'This is the first project description.',
+      image: 'https://example.com/project1.jpg',
+    },
+    {
+      name: 'Project 2',
+      description: 'This is the second project description.',
+      image: 'https://example.com/project2.jpg',
+    },
+    {
+      name: 'Project 3',
+      description: 'This is the third project description.',
+      image: 'https://example.com/project3.jpg',
+    }
+  ]);
   const [newProject, setNewProject] = useState({ name: '', description: '', image: '' });
 
   useEffect(() => {

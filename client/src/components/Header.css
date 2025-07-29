@@ -1,25 +1,189 @@
-header {
-    background-color: #333;
-    padding: 10px 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  
-  nav ul li a:hover {
-    color: #ff6347;
-  }
-  
+.sidebar {
+  width: 120px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  z-index: 4;
+}
+
+
+
+
+
+/* Make Scrollbar Always Visible */
+.mCSB_scrollTools {
+  opacity: 1 !important; /* Always display the scrollbar */
+  visibility: visible !important;
+}
+
+.profile {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.nav_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav_list li {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tooltip_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  /* border-radius: 10px; */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: transparent;
+  position: relative;
+}
+
+.siderbar_menuicon {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_icon {
+  font-size: 26px;
+  /* color: #FF6347; */
+  transition: transform 0.3s ease;
+}
+
+.menu_tooltip {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ff4a4a;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* .tooltip_box:hover {
+  background-color: rgba(255, 74, 74, 0.2);
+} */
+
+.tooltip_box:hover .nav_icon {
+  transform: translateY(-5px); /* Adjusted movement to be smaller and smoother */
+}
+
+.tooltip_box:hover .menu_tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensuring smooth transition for both the icon and tooltip */
+.tooltip_box .nav_icon,
+.tooltip_box .menu_tooltip {
+  transition: all 0.5s ease; /* Same transition for both icon and text */
+}
+
+.social_media {
+  text-align: center;
+}
+.divFollow{
+  position: relative;
+  display: block;
+  margin-bottom: 80px;
+}
+.social_media p:after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 1px;
+  height: 64px;
+  background: #e8e8e8;
+  display: block;
+}
+.social_media p {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+  position: relative;
+  display: inline-block;
+}
+.social_icons {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.social_icons span {
+  position: absolute; /* Position each icon relative to the container */
+  display: inline-block;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) scale(1); /* Center and scale properly */
+  transition: all 0.3s ease; /* Smooth transition for movement */
+}
+
+.first_icon {
+  z-index: 1; /* Ensure it's on top by default */
+}
+
+.second_icon {
+  z-index: 0; /* Below the first icon initially */
+  transform: translate(-50%, -50%) translateX(-30px); /* Offset to the left */
+  opacity: 0; /* Initially hidden */
+}
+
+.social_icons a {
+  display: flex;
+  margin-bottom: 15px;
+ 
+  font-size: 20px;
+  justify-content: center;
+  position: relative;
+  width: 40px; /* Optional: Set a width for better alignment */
+  height: 40px; /* Optional: Set a height for better alignment */
+}
+
+/* Hover Effects */
+.social_icons a:hover .first_icon {
+  transform: translate(-50%, -50%) translateX(25px); /* Move first icon to the right */
+  opacity: 0; /* Fade out for better visibility of the second icon */
+}
+
+.social_icons a:hover .second_icon {
+  z-index: 1; /* Bring the second icon to the front */
+  transform: translate(-50%, -50%) translateX(0); /* Move it to the center */
+  opacity: 1; /* Make it visible */
+}
+
+
+

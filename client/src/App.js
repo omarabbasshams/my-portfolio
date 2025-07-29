@@ -11,6 +11,12 @@ import AdminProjects from './pages/AdminProjects';
 import AdminSkills from './pages/AdminSkills';
 import ProtectedRoute from './components/ProtectedRoute';
 import AuthProvider from './context/AuthContext';
+import MovingBackground from './components/MovingBackground';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Timeline from './components/Timeline';
+
+
 
 function App() {
   return (
@@ -18,6 +24,7 @@ function App() {
       <Router>
         <div className="App">
           <Header />
+          <MovingBackground></MovingBackground>
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/projects" element={<Projects />} />
@@ -27,6 +34,7 @@ function App() {
             <Route path="/admin/projects" element={<ProtectedRoute component={AdminProjects} />} />
             <Route path="/admin/skills" element={<ProtectedRoute component={AdminSkills} />} />
           </Routes>
+          <Timeline></Timeline>
         </div>
       </Router>
     </AuthProvider>
