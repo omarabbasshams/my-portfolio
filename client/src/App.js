@@ -16,6 +16,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Timeline from './components/Timeline';
 import ExperienceTimeline from './components/ExperienceTimeline';
+import ServicesSection from './components/ServicesSection';
+import FooterSection from './components/FooterSection';
 
 
 
@@ -37,6 +39,8 @@ function App() {
           </Routes>
           <Timeline></Timeline>
           <ExperienceTimeline></ExperienceTimeline>
+          <ServicesSection></ServicesSection>
+          <FooterSection></FooterSection>
         </div>
       </Router>
     </AuthProvider>
