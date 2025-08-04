@@ -15,6 +15,7 @@ import MovingBackground from './components/MovingBackground';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Timeline from './components/Timeline';
+import ExperienceTimeline from './components/ExperienceTimeline';
 
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/admin/skills" element={<ProtectedRoute component={AdminSkills} />} />
           </Routes>
           <Timeline></Timeline>
+          <ExperienceTimeline></ExperienceTimeline>
         </div>
       </Router>
     </AuthProvider>

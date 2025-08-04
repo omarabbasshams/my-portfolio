@@ -1,0 +1,127 @@
+.timeline-section {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .timeline-heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+   
+  }
+  
+  .timeline-heading span {
+    color: #f39c12;
+    font-weight: normal;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Main Container */
+  .timeline-wrapper {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 40px 0;
+  }
+
+  .timeline-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    background-color: #ff4081; /* You can change this to match your design */
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  /* Year Circle */
+  .timeline-year-circle {
+    width: 125px;
+    height: 125px;
+    border: 10px solid ;
+    border-color: var(--circle-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var( --circle-color);
+    background-color: white;
+    margin: auto;
+    position: relative;
+  }
+  
+  /* Timeline Card */
+  .timeline-card {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  /* Tag Colors */
+  .timeline-tag {
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: var(--circle-color);
+  }
+  
+  
+  /* Number */
+  .timeline-number {
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    background-color: var(--circle-color);
+    border-radius: 10%;
+    padding: 1%;
+  }
+
+  .timeline-year-circle.align-left {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .timeline-year-circle.align-right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .timeline-year-circle.align-right::after,
+  .timeline-year-circle.align-left ::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+  }
+  .timeline-year-circle.align-right::after{
+    right: -29px;
+    border-left-color: var( --circle-color);
+
+  }
+  .timeline-year-circle.align-left ::after{
+    left: -29px;
+    border-right-color: var( --circle-color);
+
+  }
+  
+  /* Responsive Alignment Fix */
+  @media (max-width: 768px) {
+    .timeline-year-circle {
+      margin-bottom: 1rem;
+    }
+  }
+  
