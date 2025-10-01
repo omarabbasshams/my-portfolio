@@ -2,7 +2,7 @@ import React from "react";
 import './MovingBackground.css';
 import image2 from './../image2.png';
 import image1 from './../image1.png';
-import image3 from './../Nerds.svg';
+import image3 from './../nerds.svg';
 const MovingBackground = () => {
     return (
         <div className="background-container">

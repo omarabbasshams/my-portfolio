@@ -17,6 +17,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Timeline from './components/Timeline';
 import ExperienceTimeline from './components/ExperienceTimeline';
 import ServicesSection from './components/ServicesSection';
+import RecentNews from './components/RecentNews';
 import FooterSection from './components/FooterSection';
 
 
@@ -40,6 +41,7 @@ function App() {
           <Timeline></Timeline>
           <ExperienceTimeline></ExperienceTimeline>
           <ServicesSection></ServicesSection>
+          <RecentNews></RecentNews>
           <FooterSection></FooterSection>
         </div>
       </Router>
